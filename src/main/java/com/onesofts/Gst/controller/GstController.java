@@ -28,6 +28,7 @@ public class GstController {
 	public String getSave(@RequestBody Gst e) {
 		return gs.getSave(e);
 	}
+	
 	@PostMapping("setAll")
 	public String postData(@RequestBody List<Gst> e) {
 		
@@ -40,6 +41,10 @@ public class GstController {
 	@GetMapping("getData/{a}")
 	public Gst getData(@PathVariable int a) {
 		return gs.getData(a);
+	}
+	@GetMapping("getMap")
+	public Gst getMap(@RequestBody e){
+		return gs.getMap(e);
 	}
 	@GetMapping("getDataAll")
 	public List<Gst> getDataAll() {
